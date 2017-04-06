@@ -1,0 +1,133 @@
+@import "bourbon";
+
+
+//Own CSS Reset, font include and variable declarations
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,600);
+*{
+  float:left;
+  margin:0;
+  border:none;
+  padding:0;
+  font-family:'Open Sans',sans-serif;
+  color:#100C14;
+  width:100%;
+}
+$light_color: #B1B0C9;
+$dark_purple: #8E3DE8;
+body{
+  background-color:$light_color;
+}
+
+//Nav menu and main container
+.containerMain{
+  width:60%;
+  margin:0 20% 0 20%;
+  height:100%;
+  h1{
+    text-align:center;
+    width:60%;
+    margin:2% 20%;
+    font-size:2.2em;
+  }
+  ul{
+    margin:1% 0 0 0;
+    padding:0;
+    border-bottom:2px solid darken($dark_purple,28%);
+    @include linear-gradient(darken($light_color,20%),darken($dark_purple,15%));
+    border-top-left-radius:8px;
+    border-top-right-radius:8px;
+    li{
+      display:inline-block;
+      width:25%;
+      text-align:center;
+      font-size:1.1em;
+      &:hover{
+        @include linear-gradient(darken($dark_purple,10%),rgba(135,9,189,1)); 
+      }
+      &:hover:first-of-type{
+        border-top-left-radius:8px;
+      }
+      &:hover:last-of-type{
+        border-top-right-radius:8px;
+      }
+      a{
+        text-decoration:none;
+        color:black;
+        padding:7% 0;
+        font-weight:bold;
+        text-align:center;
+      }
+    }
+  }
+}
+form, fieldset{
+  border:none;
+}
+
+//Inner container for measurement outputs
+#innerContainer p {
+    width:60%;
+    margin:2% 20% 1% 20%;
+    text-align:center;
+}
+#results{
+   background:darken($light_color,8%);
+   @include linear-gradient(darken($light_color,8%),darken($light_color,11%));
+   padding:3% 0;
+   border-bottom-left-radius:8px;
+   border-bottom-right-radius:8px;
+}
+#results form fieldset{
+  label{
+    width:24%;
+    text-align:right;
+    margin:3px 1% 3px 10%;
+    display:inline-block;
+  }
+  input{
+    width:40%;
+    padding:5px;
+    margin:3px 10% 3px 0 ;
+    display:inline-block;
+    border:1px solid #AB9BCF;
+    box-shadow:1px 1px darken(#934FE3,5%);
+    &:hover{
+      box-shadow:1px 1px 1px $dark_purple;
+      background-color:lighten($light_color,15%);
+      border:1px solid $dark_purple;
+    }
+    border:1px solid #8946DB;
+    &:focus{
+      box-shadow:1px 1px 6px 1px $dark_purple;
+    }
+  }
+}
+.active1{
+    @include linear-gradient(darken($dark_purple,15%), rgba(135,9,189,1)); 
+  border-top-left-radius:8px;
+}
+.active2{
+    @include linear-gradient(darken($dark_purple,15%), rgba(135,9,189,1)); 
+}
+.active3{
+    @include linear-gradient(darken($dark_purple,15%), rgba(135,9,189,1)); 
+}
+.active4{
+    @include linear-gradient(darken($dark_purple,15%), rgba(135,9,189,1)); 
+  border-top-right-radius:8px;
+}
+//Footer details
+#footerlink{
+  width:60%;
+  margin:0 20% 0 20%;
+  text-align:center;
+  text-decoration:none;
+  color:darken($dark_purple, 25%);
+  font-size:1.15em;
+  font-weight:bold;
+  position:bottom;
+  height:150px;
+  &:hover{
+    color:darken($dark_purple, 10%);
+  }
+}
